@@ -12,6 +12,7 @@ app/build/
 # Firebase/FCM secrets
 app/google-services.json
 app/google-services.json.placeholder
+google-services.json
 tools/sender/sender-config.json
 tools/sender/*.json
 
