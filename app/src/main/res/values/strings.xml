@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Push Noti PoC</string>
+    <string name="notification_permission_rationale">Notification permission required to receive push alerts.</string>
+    <string name="refresh_token">Fetch Token</string>
+    <string name="token_pending">Token pending...</string>
+    <string name="token_error">Unable to fetch token. Check logcat.</string>
+</resources>

@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Android/Gradle
+.gradle/
+/local.properties
+/.idea/
+/build/
+app/build/
+**/build/
+
+# Firebase/FCM secrets
+app/google-services.json
+app/google-services.json.placeholder
+tools/sender/sender-config.json
+tools/sender/*.json
+
+# Python virtual env
+.venv/

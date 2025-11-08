@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224725196385",
+    "project_id": "android-push-noti-poc",
+    "storage_bucket": "android-push-noti-poc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224725196385:android:d238aa858b56d85c889420",
+        "android_client_info": {
+          "package_name": "com.travisnguyen.pushpoc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq9ax_59et0BimreWMIQH9HdIUpsbcvgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
