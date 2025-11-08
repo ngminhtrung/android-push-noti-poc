@@ -7,8 +7,18 @@ Minimal Firebase Cloud Messaging (FCM) proof-of-concept that:
 - Handles notification + data payloads in the foreground/background via `FirebaseMessagingService`.
 - Stores the most recent token/messages locally so you can see them in-app.
 - Ships with a Python sender that calls the HTTP v1 API using a service-account JSON.
-- 
+
 ![alt text](docs/screen-20251108-090604~2.gif)
+
+## PoC goals & assessment
+
+| # | Goal | Description | Assessment |
+| --- | --- | --- | --- |
+| 1 | Permission UX parity | Prompt Android 13+ users for `POST_NOTIFICATIONS` and keep the app usable if they decline. | ✅ `MainActivity` uses `ActivityResultContracts.RequestPermission`, shows a rationale dialog, and continues smoothly when denied. |
+| 2 | Token visibility | Make the device’s FCM token easy to copy/log for testing. | ✅ Token is displayed in the UI, logged to Logcat as `FCM token:`, and cached via `MessageStore`. |
+| 3 | Payload handling | Receive notification + data payloads in all app states, surface them visually, and persist them. | ✅ `PushMessagingService` shows toasts + status notifications and appends payloads to `MessageStore` for later review. |
+| 4 | Data-only support | Handle data-only pushes even when no `notification` block is present. | ✅ Reads `RemoteMessage.data`, so pure data payloads still update the UI/log. |
+| 5 | $0 sender utility | Provide a cost-free desktop sender for HTTP v1 testing. | ✅ `tools/sender/send_fcm.py` plus a local config drive authenticated pushes via a service-account key. |
 
 ## Prerequisites
 
